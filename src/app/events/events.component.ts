@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { of } from 'rxjs';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-events',
@@ -10,26 +10,10 @@ export class EventsComponent implements OnInit {
 
   events$;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.events$ = of([
-      {
-        title: 'Evento 1',
-        image: 'assets/event.jpg',
-        location: 'Brasil'
-      },
-      {
-        title: 'Evento 2',
-        image: 'assets/event.jpg',
-        location: 'España'
-      },
-      {
-        title: 'Evento 3',
-        image: 'assets/event.jpg',
-        location: 'China'
-      }
-    ]);
+    this.events$ = this.dataService.getEvents$();
   }
 
 }
