@@ -1,3 +1,10 @@
-<div data-test="event">evento 1</div>
-<div data-test="event">evento 2</div>
-<div data-test="event">evento 3</div>
+<div class="list-of-events">
+  <mat-card data-test="event" *ngFor="let event of events$ | async">
+    <mat-card-header>
+      <div mat-card-avatar class="event-header-image"></div>
+      <mat-card-title>{{ event.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-lg-image src="{{ event.image }}">
+    <mat-card-actions>From {{ event.location }}</mat-card-actions>
+  </mat-card>
+</div>

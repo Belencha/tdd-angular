@@ -2,11 +2,13 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { EventsComponent } from './events/events.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ MatCardModule ],
       declarations: [
         AppComponent,
         HeaderComponent,
