@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { EventsComponent } from './events/events.component';
 
 
 describe('AppComponent', () => {
@@ -8,7 +9,8 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        HeaderComponent
+        HeaderComponent,
+        EventsComponent
       ],
     }).compileComponents();
   }));
