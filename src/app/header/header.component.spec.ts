@@ -22,4 +22,8 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show logo', () => {
+    expect(fixture.nativeElement.querySelector('[data-test=logo]')).toBeTruthy();
+  });
 });
