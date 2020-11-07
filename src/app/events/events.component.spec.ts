@@ -22,4 +22,8 @@ describe('EventsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show some events', () => {
+    expect(fixture.nativeElement.querySelectorAll('[data-test="event"]').length).toBeGreaterThan(0);
+  });
 });
